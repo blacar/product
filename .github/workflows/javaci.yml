@@ -13,5 +13,12 @@ jobs:
         with:
           java-version: '8'
           distribution: 'adopt'
-      - name: Build with Maven
+          cache: maven
+      - name: Build 
+        run: mvn --batch-mode --update-snapshots tests
+      - name: Dockerize and integration tests
         run: mvn --batch-mode --update-snapshots verify
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Package
+          path: staging
