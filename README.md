@@ -1,3 +1,5 @@
+[![Java CI](https://github.com/blacar/product/actions/workflows/javaci.yml/badge.svg?branch=actions)](https://github.com/blacar/product/actions/workflows/javaci.yml)
+
 Steps to test this API:
   1.- Clone this repository
   2.- mvn -Pdev clean package
