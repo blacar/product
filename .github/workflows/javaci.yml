@@ -17,7 +17,7 @@ jobs:
       - name: Build 
         run: mvn --batch-mode --update-snapshots test
       - name: Dockerize and integration tests
-        run: mvn --batch-mode verify
+        run: mvn --batch-mode verify && mkdir staging && cp target/*.jar staging
       - uses: actions/upload-artifact@v2
         with:
           name: Package
