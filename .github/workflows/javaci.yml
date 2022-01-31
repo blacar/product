@@ -17,7 +17,7 @@ jobs:
       - name: Build 
         run: mvn --batch-mode --update-snapshots tests
       - name: Dockerize and integration test
-        run: mvn --batch-mode --update-snapshots verify
+        run: mvn --batch-mode verify
       - uses: actions/upload-artifact@v2
         with:
           name: Package
