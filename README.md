@@ -14,22 +14,22 @@ Notes:
 
 
 
-#clean
+# clean
 mvn -Pdev clean package -DskipTests
 
-#unit test
+# unit test
 mvn -Pdev test
 
 
-#integration test
+# integration test
 mvn -Pdev failsafe:integration-test
 
 
-#run api
+# run api
 docker run -e "SPRING_PROFILES_ACTIVE=dev" -p 8080:8080 -t product-api:0.0.1
 
 
-#create an db instance
+# create an db instance
 docker run --name my-postgres-bd -e POSTGRES_PASSWORD=12345 -p 5432:5432 -d postgres
 
 
